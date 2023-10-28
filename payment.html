@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Payment</h1>
+    </header>
+
+    <main>
+      <form class="payment-form" onsubmit="return validateForm()">
+        <h2>Billing Information</h2>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" required />
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" required />
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" id="country" required />
+        </div>
+
+        <h2>Payment Details</h2>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" required />
+        </div>
+        <div class="form-group">
+          <label for="expiration">Expiration Date</label>
+          <input type="text" id="expiration" required />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" required />
+        </div>
+
+        <button type="submit">Pay Now</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Laptop Store. All rights reserved.</p>
+    </footer>
+    <script>
+      function validateForm() {
+        // Check if all required fields are filled
+        if (
+          document.getElementById("name").value === "" ||
+          document.getElementById("email").value === "" ||
+          document.getElementById("address").value === "" ||
+          document.getElementById("city").value === "" ||
+          document.getElementById("country").value === "" ||
+          document.getElementById("card-number").value === "" ||
+          document.getElementById("expiration").value === "" ||
+          document.getElementById("cvv").value === ""
+        ) {
+          alert("Please fill in all the required fields before proceeding.");
+          return false;
+        } else {
+          alert("Your Order is Placed...");
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>
