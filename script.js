@@ -21,7 +21,7 @@ addToCartButtons.forEach((button) => {
 // Function to update the cart count in the header
 function updateCartCount(count) {
   const cartLink = document.querySelector('.cart');
-  cartLink.textContent = `Cart (${count})`;
+  cartLink.textContent = `Cart Items  (${count})`;
 }
 
 // Function to add a product to the cart
