@@ -61,3 +61,92 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+*/ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+#success-message {
+  background: #fff;
+  padding: 20px;
+  margin: 50px auto;
+  width: 300px;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.checkmark {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid green;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.checkmark:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 30px;
+  border: solid green;
+  border-width: 0 5px 5px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
