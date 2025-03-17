@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const successMessage = document.getElementById('success-message');
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
     if (form.checkValidity()) {
       form.style.display = 'none';
