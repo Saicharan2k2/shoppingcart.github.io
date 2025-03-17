@@ -1,115 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 
+:root {
+  --primary-color: #ff6b2c;
+  --dark-color: #333;
+  --black: #000;
+  --white: #fff;
+  --border-color: #ccc;
+  --success-color: green;
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   margin: 0;
-  background-image: linear-gradient(to bottom, #ff6b2c, #ff6b2c);
-  margin: 0;
   padding: 0;
+  background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
+  text-align: center;
 }
 
 header {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--dark-color);
+  color: var(--white);
   padding: 20px;
-  text-align: center;
 }
 
 main {
   padding: 20px;
 }
 
-.payment-form {
+.payment-form, form {
   max-width: 500px;
-  margin: 0 auto;
-  background-color: #fff;
+  margin: 20px auto;
+  background-color: var(--white);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  text-align: left;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-*/ body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f3f3;
-  text-align: center;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 15px;
-}
-
-form {
-  background: #fff;
-  padding: 20px;
-  margin: 20px auto;
-  width: 300px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-form div {
-  margin-bottom: 15px;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
 button {
-  background-color: #333;
-  color: #fff;
-  border: none;
+  background-color: var(--dark-color);
+  color: var(--white);
   padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
   background-color: #444;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px;
 }
 
 .hidden {
@@ -121,11 +85,11 @@ button:hover {
 }
 
 #success-message {
-  background: #fff;
+  background: var(--white);
   padding: 20px;
   margin: 50px auto;
   width: 300px;
-  border: 2px solid green;
+  border: 2px solid var(--success-color);
   border-radius: 5px;
   text-align: center;
 }
@@ -134,19 +98,19 @@ button:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 5px solid green;
+  border: 5px solid var(--success-color);
   margin: 0 auto 10px;
   position: relative;
 }
 
 .checkmark:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 15px;
   height: 30px;
-  border: solid green;
+  border: solid var(--success-color);
   border-width: 0 5px 5px 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
